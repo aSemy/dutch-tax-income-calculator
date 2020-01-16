@@ -1,12 +1,13 @@
-dutch-tax-income-calculator
+Dutch-Income-Tax-Calculator
 ===========================
 
-> Dutch Tax Income Calculator with AngularJS
+> Dutch Income Tax Calculator with AngularJS
 
 You can test it here - http://thetax.nl
 
 <p align="center">
-  <img src="http://i63.tinypic.com/15bk1k.png" alt="dutch-tax-income-calculator"/>
+  <img width="721" alt="Screenshot 2019-11-02 at 09 58 08" src="https://user-images.githubusercontent.com/1526680/68068657-5a458b80-fd57-11e9-83a8-8c3d2ebac18d.png">
+
 </p>
 
 More infromation about tax brackets [here](http://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/boxen_en_tarieven/overzicht_tarieven_en_schijven/u-hebt-in-2017-de-aow-leeftijd-nog-niet-bereikt) (for 2017)
@@ -22,7 +23,7 @@ and [here](http://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingd
 
 *Be sure that node.js is installed on your machine.*
 
-## Developemnt mode
+## Development mode
 
     npm start
 

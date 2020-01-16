@@ -1,6 +1,7 @@
 import template from './calc.html';
 import constants from '../data.json'; // Get JSON containing calculation constants
 
+
 let calcComponent = {
   template,
   controller: function($scope, $location) {
@@ -180,7 +181,7 @@ let calcComponent = {
         '$ctrl.ruling.checked',
         '$ctrl.ruling.choice',
       ],
-/*        
+/*
         '$ctrl.salary.hours',
       ].concat(this.output.map((item, index) => {
           return '$ctrl.output[' + index + '].checked';
@@ -225,10 +226,11 @@ let calcComponent = {
           if (salary.taxableYear > rulingIncome) {
             salary.taxFreeYear = salary.taxableYear * 0.30;
             salary.taxableYear -= salary.taxFreeYear;
-            if (salary.taxableYear < rulingIncome) { // For partial
-              salary.taxFreeYear = grossYear - rulingIncome;
-              salary.taxableYear = rulingIncome;
-            }
+            // this was a strange condition, I comment out it for now
+            // if (salary.taxableYear < rulingIncome) { // For partial
+            //   salary.taxFreeYear = grossYear - rulingIncome;
+            //   salary.taxableYear = rulingIncome;
+            // }
           }
         }
 
@@ -331,4 +333,5 @@ let calcComponent = {
   }
 };
 
+calcComponent.$inject = ['$scope', '$location'];
 export default calcComponent;

@@ -1,11 +1,11 @@
-<md-content class="md-body-1" layout-lg="column" layout-gt-lg="column" layout-align="center" layout-margin>
-  <div layout="row" layout-align="start" flex>
-    <md-input-container class="md-display-1 md-default-theme">
+<md-content class="md-body-1" layout-lg="column" layout-gt-lg="column" layout-align="center" layout-margin layout-padding>
+  <div layout="row" layout-align="start" flex layout-margin layout-fill>
+    <md-input-container class="md-headline md-default-theme css-income">
       <label>Gross Income</label>
       <input type="number" ng-model="$ctrl.salary.income" min="1" autofocus required>
     </md-input-container>
-    <md-input-container class="md-display-1 md-default-theme">
-      &nbsp;
+    <md-input-container class="md-headline md-default-theme">
+      <label>Per</label>
       <md-select ng-model="$ctrl.startFrom">
         <md-option value="Year">year</md-option>
         <md-option value="Month">month</md-option>
@@ -43,7 +43,7 @@
       </md-content>
       <md-content>
         <div layout="column" layout-margin>
-          <md-checkbox ng-model="$ctrl.salary.allowance" aria-label="Gross salary provided includes 8% of holiday allowance" title="Gross salary provided includes 8% of holiday allowance" disabled>
+          <md-checkbox ng-model="$ctrl.salary.allowance" aria-label="Gross salary provided includes 8% of holiday allowance" title="Gross salary provided includes 8% of holiday allowance">
             Holiday allowance included
           </md-checkbox>
           <md-checkbox ng-model="$ctrl.salary.socialSecurity" aria-label="Social security in the Netherlands" title="Social security in the Netherlands">
@@ -55,7 +55,7 @@
           <md-checkbox ng-model="$ctrl.ruling.checked" aria-label="Tax benefit rule for up-to 30% of gross salary" title="Tax benefit rule for up-to 30% of gross salary">
             30% ruling
           </md-checkbox>
-          <md-radio-group ng-model="$ctrl.ruling.choice" ng-disabled="!$ctrl.ruling.checked">
+          <md-radio-group ng-if="$ctrl.ruling.checked" ng-model="$ctrl.ruling.choice" ng-disabled="!$ctrl.ruling.checked">
             <md-radio-button value="research" aria-label="Working with scientific research" title="Working with scientific research">
               Scientific research
             </md-radio-button>
